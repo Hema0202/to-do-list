@@ -40,3 +40,5 @@ function validateUserData(data){
         }
     }
 }
+
+module.exports = validateUserData;
