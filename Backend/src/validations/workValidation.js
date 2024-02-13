@@ -26,6 +26,8 @@ function validateWorkData(data){
                 message: 'Invalid time'
             }
         }
+
+        return true;
     } catch (error) {
         return {
             status:false,

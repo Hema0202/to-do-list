@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
 
 const workSchema = new mongoose.Schema({
+    userId:{
+        type:mongoose.Types.ObjectId,
+        required : true,
+        ref : 'USer'
+    },
     title:{
         type:String,
         required: true
     },
-    description:String,
-    status: {
-        type: String,
-        enum: ['pending', 'done']
-    },
-    date:String,
-    time:String
+    description:String,    
 },
 {
     timestamps: true

@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const route = require('./src/routes/route');
 const app = express();
+const cors = require('cors');
 
 mongoose.connect('mongodb://localhost:27017')
 .then(()=> console.log('Connected with database...!'))
@@ -9,6 +11,7 @@ mongoose.connect('mongodb://localhost:27017')
 
 app.use(express.json());
 app.use('/',route);
+app.use('/', route);
 
 app.listen(process.env.PORT || 3000,(err)=>{
     if(err) console.log(err.message);
