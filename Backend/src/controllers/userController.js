@@ -5,7 +5,9 @@ const validateUserData = require('../validations/userValidation');
 
 async function register(req, res){
     try {
+        console.log("hii5")
         const data = req.body;
+        console.log(data)
         if(!data) return res.status(400).send({
             status: false,
             message: "User information required"
