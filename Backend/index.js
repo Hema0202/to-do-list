@@ -10,7 +10,7 @@ mongoose.connect(process.env.DB_CONNECTION_STRING)
 .catch((err)=>console.log(err.message));
 
 app.use(express.json());
-app.use(cors());
+app.use(cors())
 app.use('/',route);
 
 
